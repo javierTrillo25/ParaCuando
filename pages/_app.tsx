@@ -3,6 +3,7 @@ import { SWRConfig } from 'swr';
 import { fetcher } from '../lib/helpers/fetcher.helper';
 import '../styles/globals.css';
 import { NextPageWithLayout } from './page';
+
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };

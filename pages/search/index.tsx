@@ -1,9 +1,12 @@
 import { Layout } from '../../components/layout/Layout';
+import { NextPageWithLayout } from '../page';
 
-export default function Index() {
-  return (
-    <Layout>
-      <h1>search Routes</h1>
-    </Layout>
-  );
-}
+const Search: NextPageWithLayout = () => {
+  return <h1>Search PageRoute</h1>;
+};
+
+export default Search;
+
+Search.getLayout = (page) => {
+  return <Layout>{page}</Layout>;
+};

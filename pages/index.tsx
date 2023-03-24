@@ -5,6 +5,31 @@ import { useCategories } from '../lib/services/categories.services';
 
 import { NextPageWithLayout } from './page';
 
+export interface Categories {
+  id: string;
+  name: string;
+  description: string;
+  cover?: string;
+  url?: string;
+}
+export const linkCategories: Categories[] = [
+  {
+    id: 'brands',
+    name: 'Marcas y tiendas',
+    description: 'Descubre las marcas y tiendas que la gente quiere cerca',
+  },
+  {
+    id: 'artists',
+    name: 'Artistas y conciertos',
+    description: 'Descubre los artistas y conciertos que la gente quiere cerca',
+  },
+  {
+    id: 'tournaments',
+    name: 'Torneos',
+    description: 'Descubre los torneos y eventos que la gente quiere cerca',
+  },
+];
+
 const Home: NextPageWithLayout = () => {
   const { data, error, isLoading } = useCategories();
 
